@@ -38,11 +38,12 @@ export default function Reveal({
     return () => observer.disconnect();
   }, []);
 
-  const Tag = as as keyof React.JSX.IntrinsicElements;
+  const Tag = as as unknown as React.ComponentType<
+    React.HTMLAttributes<HTMLElement> & React.RefAttributes<HTMLElement>
+  >;
 
   return (
     <Tag
-      // @ts-expect-error -- ref type narrows fine at runtime for the chosen tags
       ref={ref}
       className={`reveal ${visible ? "is-visible" : ""} ${className}`}
       style={{ transitionDelay: `${delay}ms` }}

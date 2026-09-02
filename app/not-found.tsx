@@ -13,7 +13,7 @@ export default function NotFound() {
       </h1>
 
       <p className="mt-6 text-lg text-center">
-        Oops! The page you're looking for doesn't exist.
+        Oops! The page you&apos;re looking for doesn&apos;t exist.
       </p>
 
       <Link
